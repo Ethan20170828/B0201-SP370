@@ -1,0 +1,269 @@
+C51 COMPILER V9.01   SP37                                                                  12/15/2017 21:49:21 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE SP37
+OBJECT MODULE PLACED IN .\SP37.obj
+COMPILER INVOKED BY: D:\Program Files (x86)\keil\C51\BIN\C51.EXE ..\src\user\SP37.c BROWSE INCDIR(..\src\inc) DEBUG OBJE
+                    -CTEXTEND PRINT(.\list\SP37.lst) OBJECT(.\SP37.obj)
+
+line level    source
+
+   1          #include "Reg_SP37.h"
+   2          #include "SP37_ROMLibrary.h"
+   3          #include "SP37.h"
+   4          #include <absacc.h>             //绝对地址访问包含头文件
+   5          
+   6          
+   7          
+   8          unsigned char Measure_Pressure(int *Pressure_VAL)
+   9          {
+  10   1              //Input Parameter:2 Samples
+  11   1              unsigned int SensorConfig = 0x0481;
+  12   1      
+  13   1              //Input Parameter: SampleRate
+  14   1              unsigned char SampleRate = 0x00;
+  15   1      
+  16   1              unsigned char StatusByte;
+  17   1              struct {
+  18   1                      signed int Compensated_Pressure;
+  19   1                      signed int Raw_Pressure;
+  20   1                      signed int Raw_Temperature;
+  21   1              }idata Press_Result;
+  22   1      
+  23   1              StatusByte = Meas_Pressure(SensorConfig,SampleRate,&Press_Result.Compensated_Pressure);
+  24   1      
+  25   1              if(!StatusByte)
+  26   1              {
+  27   2                      *Pressure_VAL = Press_Result.Compensated_Pressure;
+  28   2                      return 1;
+  29   2              }
+  30   1              else
+  31   1              {
+  32   2                      // Pressure measurement was not successful, underflow or
+  33   2                      // overflow of ADC result, Sensor Fault Wire Bond Check,
+  34   2                      // or VMIN warning occurred
+  35   2                      return 0;
+  36   2              }
+  37   1      }
+  38          
+  39          
+  40          unsigned char Measure_Acceleration(int *Acceleration_VAL)
+  41          {
+  42   1              //new raw temperature | Average value | 8 Samples
+  43   1              unsigned int SensorConfig = (0<<8) | (0<<3) | (3<<0);
+  44   1              //00H: No delay
+  45   1              unsigned char SampRate = 0x00;
+  46   1              unsigned char StatusByte;
+  47   1              struct {
+  48   1                      signed int Compensated_Acceleration;
+  49   1                      signed int Raw_Acceleration_Data;
+  50   1                      signed int Raw_Temperature;
+  51   1              } idata AccelResult;
+  52   1      
+  53   1              StatusByte = Meas_Acceleration(SensorConfig,SampRate,&AccelResult.Compensated_Acceleration);
+  54   1              if(!StatusByte)
+C51 COMPILER V9.01   SP37                                                                  12/15/2017 21:49:21 PAGE 2   
+
+  55   1              {
+  56   2                      *Acceleration_VAL = AccelResult.Compensated_Acceleration;
+  57   2                      return 1;
+  58   2              }
+  59   1              else
+  60   1              {
+  61   2                      // Acceleration measurement was not successful, underflow or
+  62   2                      // overflow of ADC result, Sensor Fault Wire Bond Check,
+  63   2                      // Sensor Fault Diagnosis Resistor, or VMIN warning occurred
+  64   2                      return 0;
+  65   2              }               
+  66   1      }
+  67          
+  68          
+  69          unsigned char Measure_Temperature(int *Temperature_VAL)
+  70          {
+  71   1              unsigned char StatusByte;
+  72   1              struct{
+  73   1                      signed int Compensated_Temperature;
+  74   1                      signed int Raw_Temperature;
+  75   1              }idata Temp_Result;
+  76   1      
+  77   1              StatusByte = Meas_Temperature(&Temp_Result.Compensated_Temperature);
+  78   1              if(!StatusByte)
+  79   1              {
+  80   2                      *Temperature_VAL = Temp_Result.Compensated_Temperature;
+  81   2                      return 1;
+  82   2              }
+  83   1              else
+  84   1              {
+  85   2                      return 0;
+  86   2              }
+  87   1      }
+  88          
+  89          
+  90          unsigned char Measure_Supply_Voltage(int *Voltage_VAL)
+  91          {       
+  92   1              unsigned char StatusByte;
+  93   1      
+  94   1              struct{
+  95   1                      signed int Voltage;
+  96   1                      signed int Raw_voltage;
+  97   1              }idata Volt_Result;
+  98   1      
+  99   1              StatusByte = Meas_Supply_Voltage(&Volt_Result.Voltage);
+ 100   1              if(!StatusByte)
+ 101   1              {
+ 102   2                      *Voltage_VAL = Volt_Result.Voltage;
+ 103   2                      return 1;
+ 104   2              }
+ 105   1              else
+ 106   1              {
+ 107   2                      return 0;
+ 108   2              }
+ 109   1      }
+ 110          
+ 111          
+ 112          char StartXtalOscillator(void)
+ 113          {
+ 114   1              // Return value of start xtal oscillator is stored in StatusByte
+ 115   1              unsigned char StatusByte;
+ 116   1              // Input parameters for start xtal oscillator
+C51 COMPILER V9.01   SP37                                                                  12/15/2017 21:49:21 PAGE 3   
+
+ 117   1              unsigned char Delay = 33;
+ 118   1              // Start xtal oscillator function call
+ 119   1              StatusByte = StartXtalOsc(Delay);
+ 120   1              return StatusByte;
+ 121   1      }
+ 122          
+ 123          // Defines
+ 124          #define bitmask_TMOD_CLK 0x08
+ 125          #define bitmask_RFS_RFSE 0x02
+ 126          
+ 127          char StopXtalOscillator(void)
+ 128          {
+ 129   1              // Return value of stop xtal oscillator is stored in StatusByte
+ 130   1              signed char StatusByte;
+ 131   1              while (!(RFS & bitmask_RFS_RFSE)); // Wait for RF Transmission to end
+ 132   1              RFC &= ~0x03; // Disable PA & PLL
+ 133   1              TMOD &= ~bitmask_TMOD_CLK; // Clear TMOD_CLK
+ 134   1              StatusByte = StopXtalOsc(); // Stop XTAL oscillator
+ 135   1              return StatusByte;
+ 136   1      }
+ 137          
+ 138          /*
+ 139          #define CRC8_INIT 0x00
+ 140          //初始值0x00
+ 141          //polynomial (x8+x2+x+1) => 0x07
+ 142          unsigned char CRC8_Calculate(unsigned char idata *BlockStart, unsigned char BlockLength)
+ 143          {
+ 144                  return CRC8_Calc(CRC8_INIT,BlockStart,BlockLength);
+ 145          }
+ 146          */
+ 147          
+ 148          #define CRC_Baicheva_INIT 0xAA          //German Association of the Automotive Industry (VDA)
+ 149          //初始值0xAA
+ 150          //polynomial (x8+x5+x3+x2+x+1) => 0x2F
+ 151          //BlockLength <= 119bits/8 = 14         小于119bit最佳
+ 152          unsigned char CRC_Baicheva_Calculate(unsigned char idata *BlockStart, unsigned char BlockLength)
+ 153          {
+ 154   1              return CRC_Baicheva_Calc(CRC_Baicheva_INIT,BlockStart,BlockLength);
+ 155   1      }
+ 156          
+ 157          //自定义ID存储于绝对地址CBYTE[0x57E0]和[0x57E1]
+ 158          //此处为用户ID,可以由烧录器指定并烧录
+ 159          void Read_SP37_ID(unsigned char idata *IDH,unsigned char idata *IDL)
+ 160          {
+ 161   1              *IDH = CBYTE[0x57E0];
+ 162   1              *IDL = CBYTE[0x57E1];
+ 163   1      }
+ 164          
+ 165          //该接口用于返回轮胎位置识别码，这是一种轮胎识别实现方法
+ 166          // 一般是用LF设备对轮胎位置进行标定，然后写入SP370的FLASH中某一固定位置中
+ 167          E_Tyre_Position Read_Tyre_Position(void)
+ 168          {
+ 169   1              return (E_Tyre_Position)CBYTE[0x57E2];
+ 170   1      }
+ 171          
+ 172          
+ 173          //重新设置SP37 随机数发生器的种子
+ 174          //使用LSB of the Sensor ID作为其种子,可以使得每一个设备的延时不一致
+ 175          //返回种子值
+ 176          unsigned char SP37_InitRandom(void)
+ 177          {
+ 178   1              ID_Struct ID_Result;
+C51 COMPILER V9.01   SP37                                                                  12/15/2017 21:49:21 PAGE 4   
+
+ 179   1              unsigned char ID_LSB;
+ 180   1      
+ 181   1              Read_ID(&ID_Result);
+ 182   1      
+ 183   1              ID_LSB = (unsigned char)ID_Result.ID;
+ 184   1      
+ 185   1              //随机数种子不能为0
+ 186   1              if( ID_LSB != 0){
+ 187   2                      RNGD = ID_LSB;
+ 188   2              }
+ 189   1      
+ 190   1              return RNGD;
+ 191   1      }
+ 192          
+ 193          void Send_RF_Init(void)
+ 194          {
+ 195   1              //配置RF
+ 196   1              //Data not inverted | ASK modulation | 433MHz | 3 PA output stages
+ 197   1              //RFTX = (1<<7) | (1<<5) | (1<<2) | (3<<0);
+ 198   1              // FSK switch open, FSK with internal pulling capacitors, data inv., 433.92 MHz, 1PA stages
+ 199   1              RFTX = (0<<7) | (1<<6) | (0<<5) | (1<<2) | (0<<0);
+ 200   1      
+ 201   1              //XTAL1 = 0x7F;                         // +/- 35kHz Deviation
+ 202   1              //XTAL0 = 0x17; ;       
+ 203   1      
+ 204   1              XTAL1 = 0xFF;                           // +/- 35kHz Deviation
+ 205   1              XTAL0 = 0x0;
+ 206   1      }
+ 207          
+ 208          //波特率9600Bit/s
+ 209          #define BAUDRATE 9600
+ 210          //返回值0:成功
+ 211          //返回其他值 失败
+ 212          //-1: StartXtalOscillator->error
+ 213          //-2: VCO_Tuning->error
+ 214          //-3: Send_RF_Telegram->error
+ 215          //-4: StopXtalOscillator->error
+ 216          char Send_RF_Data(unsigned char idata * descriptorPtr)
+ 217          {
+ 218   1              signed char StatusByte;
+ 219   1              
+ 220   1              StatusByte = StartXtalOscillator();
+ 221   1              
+ 222   1              //signed char VCO_Tuning(void)
+ 223   1              StatusByte = VCO_Tuning();
+ 224   1              if(StatusByte)
+ 225   1                      return -2;
+ 226   1      
+ 227   1              StatusByte = Send_RF_Telegram(BAUDRATE,descriptorPtr);
+ 228   1              if(StatusByte)
+ 229   1                      return -3;
+ 230   1      
+ 231   1              StatusByte = StopXtalOscillator();
+ 232   1              if(StatusByte == -2)
+ 233   1                      return -4;
+ 234   1      
+ 235   1              return 0;
+ 236   1      }
+ 237          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+C51 COMPILER V9.01   SP37                                                                  12/15/2017 21:49:21 PAGE 5   
+
+   CODE SIZE        =    283    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      18
+   IDATA SIZE       =   ----      20
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

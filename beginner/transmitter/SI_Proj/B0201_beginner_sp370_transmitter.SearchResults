@@ -1,0 +1,18 @@
+---- Meas_Pressure Matches (4 in 2 files) ----
+SP37.c (c:\winshare\learning_for_project\b0201-sp370\beginner\transmitter\src\user):	StatusByte = Meas_Pressure(SensorConfig,SampleRate,&Press_Result.Compensated_Pressure);
+SP37_ROMLibrary.h (c:\winshare\learning_for_project\b0201-sp370\beginner\transmitter\src\inc):  #define Meas_Pressure                    UNUSED
+SP37_ROMLibrary.h (c:\winshare\learning_for_project\b0201-sp370\beginner\transmitter\src\inc):   extern unsigned char Meas_Pressure (unsigned int SensorConfig, unsigned char SampRate, signed int idata *PressResult );
+SP37_ROMLibrary.h (c:\winshare\learning_for_project\b0201-sp370\beginner\transmitter\src\inc):    #undef Meas_Pressure
+---- Pressure_VAL Matches (3 in 2 files) ----
+SP37.c (c:\winshare\learning_for_project\b0201-sp370\beginner\transmitter\src\user):unsigned char Measure_Pressure(int *Pressure_VAL)	// 输出型参数int *Pressure_VAL，将测到的压力值传出去
+SP37.c (c:\winshare\learning_for_project\b0201-sp370\beginner\transmitter\src\user):		*Pressure_VAL = Press_Result.Compensated_Pressure;
+SP37.h (c:\winshare\learning_for_project\b0201-sp370\beginner\transmitter\src\inc):unsigned char Measure_Pressure(int *Pressure_VAL);
+---- StartXtalOsc Matches (4 in 2 files) ----
+SP37.c (c:\winshare\learning_for_project\b0201-sp370\beginner\transmitter\src\user):	StatusByte = StartXtalOsc(Delay);
+SP37_ROMLibrary.h (c:\winshare\learning_for_project\b0201-sp370\beginner\transmitter\src\inc):  #define StartXtalOsc                     UNUSED
+SP37_ROMLibrary.h (c:\winshare\learning_for_project\b0201-sp370\beginner\transmitter\src\inc):   extern signed char StartXtalOsc(unsigned char Delay);
+SP37_ROMLibrary.h (c:\winshare\learning_for_project\b0201-sp370\beginner\transmitter\src\inc):     #undef StartXtalOsc
+---- StartXtalOscillator Matches (3 in 2 files) ----
+SP37.c (c:\winshare\learning_for_project\b0201-sp370\beginner\transmitter\src\user):char StartXtalOscillator(void)
+SP37.c (c:\winshare\learning_for_project\b0201-sp370\beginner\transmitter\src\user):	StatusByte = StartXtalOscillator();		// 晶振打开，开始发送数据
+SP37.h (c:\winshare\learning_for_project\b0201-sp370\beginner\transmitter\src\inc):char StartXtalOscillator(void);

@@ -1,0 +1,186 @@
+---- TIM3_IRQHandler Matches (25 in 9 files) ----
+Startup_stm32f10x_cl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     TIM3_IRQHandler            ; TIM3
+Startup_stm32f10x_cl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  TIM3_IRQHandler            [WEAK]
+Startup_stm32f10x_cl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):TIM3_IRQHandler
+Startup_stm32f10x_hd.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     TIM3_IRQHandler            ; TIM3
+Startup_stm32f10x_hd.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  TIM3_IRQHandler            [WEAK]
+Startup_stm32f10x_hd.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):TIM3_IRQHandler
+Startup_stm32f10x_hd_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     TIM3_IRQHandler                 ; TIM3
+Startup_stm32f10x_hd_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  TIM3_IRQHandler                  [WEAK]
+Startup_stm32f10x_hd_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):TIM3_IRQHandler
+Startup_stm32f10x_ld.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     TIM3_IRQHandler            ; TIM3
+Startup_stm32f10x_ld.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  TIM3_IRQHandler            [WEAK]
+Startup_stm32f10x_ld.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):TIM3_IRQHandler
+Startup_stm32f10x_ld_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     TIM3_IRQHandler                 ; TIM3
+Startup_stm32f10x_ld_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  TIM3_IRQHandler                  [WEAK]
+Startup_stm32f10x_ld_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):TIM3_IRQHandler
+Startup_stm32f10x_md.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     TIM3_IRQHandler            ; TIM3
+Startup_stm32f10x_md.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  TIM3_IRQHandler            [WEAK]
+Startup_stm32f10x_md.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):TIM3_IRQHandler
+Startup_stm32f10x_md_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     TIM3_IRQHandler                 ; TIM3
+Startup_stm32f10x_md_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  TIM3_IRQHandler                  [WEAK]
+Startup_stm32f10x_md_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):TIM3_IRQHandler
+Startup_stm32f10x_xl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     TIM3_IRQHandler               ; TIM3
+Startup_stm32f10x_xl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  TIM3_IRQHandler               [WEAK]
+Startup_stm32f10x_xl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):TIM3_IRQHandler
+Tim.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\driver):void TIM3_IRQHandler(void)
+---- Send_Tire_Data_To_Dvr Matches (4 in 2 files) ----
+Main.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):void Send_Tire_Data_To_Dvr(void);
+Main.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):void Send_Tire_Data_To_Dvr(void)
+Tim.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\driver):extern void Send_Tire_Data_To_Dvr(void);
+Tim.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\driver):			Send_Tire_Data_To_Dvr();			
+---- TIM3_IRQHandler Matches (25 in 9 files) ----
+Startup_stm32f10x_cl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     TIM3_IRQHandler            ; TIM3
+Startup_stm32f10x_cl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  TIM3_IRQHandler            [WEAK]
+Startup_stm32f10x_cl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):TIM3_IRQHandler
+Startup_stm32f10x_hd.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     TIM3_IRQHandler            ; TIM3
+Startup_stm32f10x_hd.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  TIM3_IRQHandler            [WEAK]
+Startup_stm32f10x_hd.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):TIM3_IRQHandler
+Startup_stm32f10x_hd_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     TIM3_IRQHandler                 ; TIM3
+Startup_stm32f10x_hd_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  TIM3_IRQHandler                  [WEAK]
+Startup_stm32f10x_hd_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):TIM3_IRQHandler
+Startup_stm32f10x_ld.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     TIM3_IRQHandler            ; TIM3
+Startup_stm32f10x_ld.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  TIM3_IRQHandler            [WEAK]
+Startup_stm32f10x_ld.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):TIM3_IRQHandler
+Startup_stm32f10x_ld_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     TIM3_IRQHandler                 ; TIM3
+Startup_stm32f10x_ld_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  TIM3_IRQHandler                  [WEAK]
+Startup_stm32f10x_ld_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):TIM3_IRQHandler
+Startup_stm32f10x_md.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     TIM3_IRQHandler            ; TIM3
+Startup_stm32f10x_md.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  TIM3_IRQHandler            [WEAK]
+Startup_stm32f10x_md.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):TIM3_IRQHandler
+Startup_stm32f10x_md_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     TIM3_IRQHandler                 ; TIM3
+Startup_stm32f10x_md_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  TIM3_IRQHandler                  [WEAK]
+Startup_stm32f10x_md_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):TIM3_IRQHandler
+Startup_stm32f10x_xl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     TIM3_IRQHandler               ; TIM3
+Startup_stm32f10x_xl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  TIM3_IRQHandler               [WEAK]
+Startup_stm32f10x_xl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):TIM3_IRQHandler
+Tim.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\driver):void TIM3_IRQHandler(void)
+---- Signal_Check Matches (5 in 2 files) ----
+Main.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):unsigned char Signal_Check[4]={0};	//监测每个轮胎是否有断开连接
+Main.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):						Signal_Check[i] = 1;
+Tim.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\driver):extern unsigned char Signal_Check[4];
+Tim.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\driver):			if (Signal_Check[i] == 1)		//信号异常监测
+Tim.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\driver):			Signal_Check[i] = 0;
+---- ReceiveState Matches (5 in 3 files) ----
+Main.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):		if(ReceiveState == 1)
+Main.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):			ReceiveState = 0;
+Usart.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\driver):u8 ReceiveState = 0;
+Usart.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\driver):		ReceiveState = 1;
+Usart.h (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\inc):extern u8 ReceiveState;
+---- USART1_IRQHandler Matches (25 in 9 files) ----
+Startup_stm32f10x_cl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     USART1_IRQHandler          ; USART1
+Startup_stm32f10x_cl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  USART1_IRQHandler          [WEAK]
+Startup_stm32f10x_cl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):USART1_IRQHandler
+Startup_stm32f10x_hd.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     USART1_IRQHandler          ; USART1
+Startup_stm32f10x_hd.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  USART1_IRQHandler          [WEAK]
+Startup_stm32f10x_hd.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):USART1_IRQHandler
+Startup_stm32f10x_hd_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     USART1_IRQHandler               ; USART1
+Startup_stm32f10x_hd_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  USART1_IRQHandler                [WEAK]
+Startup_stm32f10x_hd_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):USART1_IRQHandler
+Startup_stm32f10x_ld.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     USART1_IRQHandler          ; USART1
+Startup_stm32f10x_ld.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  USART1_IRQHandler          [WEAK]
+Startup_stm32f10x_ld.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):USART1_IRQHandler
+Startup_stm32f10x_ld_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     USART1_IRQHandler               ; USART1
+Startup_stm32f10x_ld_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  USART1_IRQHandler                [WEAK]
+Startup_stm32f10x_ld_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):USART1_IRQHandler
+Startup_stm32f10x_md.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     USART1_IRQHandler          ; USART1
+Startup_stm32f10x_md.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  USART1_IRQHandler          [WEAK]
+Startup_stm32f10x_md.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):USART1_IRQHandler
+Startup_stm32f10x_md_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     USART1_IRQHandler               ; USART1
+Startup_stm32f10x_md_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  USART1_IRQHandler                [WEAK]
+Startup_stm32f10x_md_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):USART1_IRQHandler
+Startup_stm32f10x_xl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     USART1_IRQHandler             ; USART1
+Startup_stm32f10x_xl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  USART1_IRQHandler             [WEAK]
+Startup_stm32f10x_xl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):USART1_IRQHandler
+Usart.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\driver):void USART1_IRQHandler(void)                	//串口1中断服务程序
+---- USART1_RX_NUM Matches (15 in 3 files) ----
+Main.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):		if (FLASE == CRC_Calc(USART1_RxBuffer, USART1_RX_NUM))
+Main.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):		for (i=0; i<USART1_RX_NUM; i++)
+Main.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):			if (USART1_RX_NUM == 6) 
+Main.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):			else if(USART1_RX_NUM == 7)
+Main.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):		if(USART1_RX_NUM == 6)
+Main.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):		if(USART1_RX_NUM == 7)
+Main.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):	for(i=0;i<USART1_RX_NUM;i++)
+Main.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):	USART1_RX_NUM = 0;
+Usart.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\driver):u16 USART1_RX_NUM=0;       //接收字符数目与回车状态
+Usart.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\driver):			USART1_RxBuffer[USART1_RX_NUM] = getchar;
+Usart.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\driver):			USART1_RX_NUM = (USART1_RX_NUM + 1) % USART1_RxBufferSize;
+Usart.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\driver):			USART1_RxBuffer[(USART1_RX_NUM) % USART1_RxBufferSize] = '\0';
+Usart.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\driver):			USART1_RX_NUM |= USART1_ENTER_FLAG;		//用于判断回车接收到数据结束,使用时记得清零
+Usart.h (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\inc):extern u16 USART1_RX_NUM;       //接收数据大小，回车将在USART1_RxBufferSize前一位至1
+---- USART1_IRQHandler Matches (25 in 9 files) ----
+Startup_stm32f10x_cl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     USART1_IRQHandler          ; USART1
+Startup_stm32f10x_cl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  USART1_IRQHandler          [WEAK]
+Startup_stm32f10x_cl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):USART1_IRQHandler
+Startup_stm32f10x_hd.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     USART1_IRQHandler          ; USART1
+Startup_stm32f10x_hd.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  USART1_IRQHandler          [WEAK]
+Startup_stm32f10x_hd.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):USART1_IRQHandler
+Startup_stm32f10x_hd_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     USART1_IRQHandler               ; USART1
+Startup_stm32f10x_hd_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  USART1_IRQHandler                [WEAK]
+Startup_stm32f10x_hd_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):USART1_IRQHandler
+Startup_stm32f10x_ld.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     USART1_IRQHandler          ; USART1
+Startup_stm32f10x_ld.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  USART1_IRQHandler          [WEAK]
+Startup_stm32f10x_ld.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):USART1_IRQHandler
+Startup_stm32f10x_ld_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     USART1_IRQHandler               ; USART1
+Startup_stm32f10x_ld_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  USART1_IRQHandler                [WEAK]
+Startup_stm32f10x_ld_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):USART1_IRQHandler
+Startup_stm32f10x_md.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     USART1_IRQHandler          ; USART1
+Startup_stm32f10x_md.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  USART1_IRQHandler          [WEAK]
+Startup_stm32f10x_md.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):USART1_IRQHandler
+Startup_stm32f10x_md_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     USART1_IRQHandler               ; USART1
+Startup_stm32f10x_md_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  USART1_IRQHandler                [WEAK]
+Startup_stm32f10x_md_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):USART1_IRQHandler
+Startup_stm32f10x_xl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     USART1_IRQHandler             ; USART1
+Startup_stm32f10x_xl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  USART1_IRQHandler             [WEAK]
+Startup_stm32f10x_xl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):USART1_IRQHandler
+Usart.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\driver):void USART1_IRQHandler(void)                	//串口1中断服务程序
+---- ReceiveState Matches (5 in 3 files) ----
+Main.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):		if(ReceiveState == 1)
+Main.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):			ReceiveState = 0;
+Usart.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\driver):u8 ReceiveState = 0;
+Usart.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\driver):		ReceiveState = 1;
+Usart.h (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\inc):extern u8 ReceiveState;
+---- TDA5235_FIFO_NUM Matches (9 in 3 files) ----
+Main.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):		if(TDA5235_FIFO_NUM){
+Main.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):			TDA5235_FIFO_NUM = 0;	//清零
+TDA5235.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):u8 TDA5235_FIFO_NUM=0;
+TDA5235.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):	if(!TDA5235_FIFO_NUM){		//清零后(被读取后)才会更新 新的数据
+TDA5235.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):		TDA5235_FIFO_NUM = TDA5235_Read_FIFO(TDA5235_FIFO);
+TDA5235.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):    	if(TDA5235_FIFO_NUM<CRC8_CAL_LENGTH){
+TDA5235.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):        	TDA5235_FIFO_NUM = 0;
+TDA5235.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):			TDA5235_FIFO_NUM = 0;
+TDA5235.h (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\inc):extern u8 TDA5235_FIFO_NUM;
+---- EXTI0_IRQHandler Matches (25 in 9 files) ----
+Startup_stm32f10x_cl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     EXTI0_IRQHandler           ; EXTI Line 0
+Startup_stm32f10x_cl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  EXTI0_IRQHandler           [WEAK]
+Startup_stm32f10x_cl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):EXTI0_IRQHandler
+Startup_stm32f10x_hd.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     EXTI0_IRQHandler           ; EXTI Line 0
+Startup_stm32f10x_hd.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  EXTI0_IRQHandler           [WEAK]
+Startup_stm32f10x_hd.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):EXTI0_IRQHandler
+Startup_stm32f10x_hd_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     EXTI0_IRQHandler                ; EXTI Line 0
+Startup_stm32f10x_hd_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  EXTI0_IRQHandler                 [WEAK]
+Startup_stm32f10x_hd_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):EXTI0_IRQHandler
+Startup_stm32f10x_ld.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     EXTI0_IRQHandler           ; EXTI Line 0
+Startup_stm32f10x_ld.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  EXTI0_IRQHandler           [WEAK]
+Startup_stm32f10x_ld.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):EXTI0_IRQHandler
+Startup_stm32f10x_ld_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     EXTI0_IRQHandler                ; EXTI Line 0
+Startup_stm32f10x_ld_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  EXTI0_IRQHandler                 [WEAK]
+Startup_stm32f10x_ld_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):EXTI0_IRQHandler
+Startup_stm32f10x_md.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     EXTI0_IRQHandler           ; EXTI Line 0
+Startup_stm32f10x_md.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  EXTI0_IRQHandler           [WEAK]
+Startup_stm32f10x_md.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):EXTI0_IRQHandler
+Startup_stm32f10x_md_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     EXTI0_IRQHandler                ; EXTI Line 0
+Startup_stm32f10x_md_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  EXTI0_IRQHandler                 [WEAK]
+Startup_stm32f10x_md_vl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):EXTI0_IRQHandler
+Startup_stm32f10x_xl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                DCD     EXTI0_IRQHandler              ; EXTI Line 0
+Startup_stm32f10x_xl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):                EXPORT  EXTI0_IRQHandler              [WEAK]
+Startup_stm32f10x_xl.s (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\cmsis\cm3\devicesupport\st\stm32f10x\startup\arm):EXTI0_IRQHandler
+TDA5235.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):void EXTI0_IRQHandler(void)
+---- Study_Mode_Flag Matches (6 in 2 files) ----
+Main.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):unsigned char Study_Mode_Flag=0;	//进入学习模式
+Main.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):			if(!Study_Mode_Flag)		// 正常工作模式
+Main.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):	Study_Mode_Flag = 1;
+Main.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\user):	Study_Mode_Flag=0;
+Tim.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\driver):extern u8 Study_Mode_Flag;
+Tim.c (c:\winshare\learning_for_project\b0201-sp370\professional\receiver\senior\src\driver):		if(!Study_Mode_Flag)
+---- strncmp Matches (0 in 0 files) ----

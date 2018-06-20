@@ -1,0 +1,3 @@
+---- CRC8_INIT Matches (2 in 1 files) ----
+CRC.c (c:\winshare\learning_for_project\b0201-sp370\beginner\receiver\src\driver):#define CRC8_INIT  0xAA		// ³õÖµ
+CRC.c (c:\winshare\learning_for_project\b0201-sp370\beginner\receiver\src\driver):	unsigned char CRC_VAL = CRC8_INIT;	// ³õÖµ

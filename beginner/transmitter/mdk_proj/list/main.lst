@@ -1,0 +1,83 @@
+C51 COMPILER V9.01   MAIN                                                                  12/15/2017 21:49:20 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\main.obj
+COMPILER INVOKED BY: D:\Program Files (x86)\keil\C51\BIN\C51.EXE ..\src\user\main.c BROWSE INCDIR(..\src\inc) DEBUG OBJE
+                    -CTEXTEND PRINT(.\list\main.lst) OBJECT(.\main.obj)
+
+line level    source
+
+   1          /* ************************************************************************************************** */
+   2          /* ************************************************************************************************** */
+   3          /* ************************************************************************************************** */
+   4          /* ************************************************************************************************** */
+   5          /*   ----------------------------------------------------------------------------------------------   */
+   6          /*                                          ziotlab出品                                                                         */
+   7          /*   ----------------------------------------------------------------------------------------------   */
+   8          
+   9          
+  10          
+  11          
+  12          
+  13          #include "Reg_SP37.h"
+  14          #include "SP37_ROMLibrary.h"
+  15          #include <uart.h>
+  16          #include <SP37.h>
+  17          #include <RF.h>
+  18          
+  19          void MAIN(void)
+  20          {
+  21   1              unsigned char StatusByte;
+  22   1              T_SP37_DATA idata t_sp37;
+  23   1      
+  24   1              if(WUF == 0x00){                        // 冷启动上电时,进行配置
+  25   2                                                                      
+  26   2                      //串口初始化
+  27   2                      Uart_Init();
+  28   2                      //RF433初始化
+  29   2                      Send_RF_Init();
+  30   2                      //随机数初始化
+  31   2                      StatusByte = SP37_InitRandom();
+  32   2              }
+  33   1      
+  34   1              Read_SP37_ID(&t_sp37.IDH,&t_sp37.IDL);
+  35   1              Read_ID(&t_sp37.ID_Result);
+  36   1              t_sp37.Tyre_Position = Read_Tyre_Position();
+  37   1              
+  38   1              while(1)
+  39   1              {
+  40   2                      WDRES = 1;
+  41   2      
+  42   2                      Measure_Pressure(&t_sp37.Pressure);
+  43   2                      Measure_Temperature(&t_sp37.Temperature);
+  44   2                      Measure_Acceleration(&t_sp37.Acceleration);
+  45   2                      Measure_Supply_Voltage(&t_sp37.Voltage);
+  46   2                      
+  47   2                      StatusByte = Send_RF(t_sp37);
+  48   2                      
+  49   2                      if(!StatusByte)
+  50   2                              printf("Send_RF Succeed\r\n");
+  51   2                      else
+  52   2                              printf("Send_RF ERROR\r\n");
+  53   2      
+  54   2                      Wait100usMultiples(100);
+C51 COMPILER V9.01   MAIN                                                                  12/15/2017 21:49:20 PAGE 2   
+
+  55   2              }
+  56   1      }
+  57          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    124    ----
+   CONSTANT SIZE    =     34    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       1
+   IDATA SIZE       =   ----      17
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

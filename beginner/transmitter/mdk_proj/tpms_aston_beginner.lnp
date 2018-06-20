@@ -1,0 +1,8 @@
+".\STARTUP.obj",
+"..\src\lib\SP37_ROMLibrary.LIB",
+".\main.obj",
+".\RF.obj",
+".\SP37.obj",
+".\uart.obj" 
+TO "tpms_aston_beginner" 
+PRINT(".\list\tpms_aston_beginner.m51") RAMSIZE(256) 

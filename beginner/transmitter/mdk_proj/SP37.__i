@@ -1,0 +1,1 @@
+"..\src\user\SP37.c" BROWSE INCDIR(..\src\inc) DEBUG OBJECTEXTEND PRINT(.\list\SP37.lst) OBJECT(.\SP37.obj)

@@ -1,0 +1,143 @@
+A51 MACRO ASSEMBLER  STARTUP                                                              12/15/2017 21:49:20 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02
+OBJECT MODULE PLACED IN .\STARTUP.obj
+ASSEMBLER INVOKED BY: D:\Program Files (x86)\keil\C51\BIN\A51.EXE ..\src\startup\STARTUP.A51 SET(SMALL) DEBUG PRINT(.\li
+                      st\STARTUP.lst) OBJECT(.\STARTUP.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ;/* ***************************************************************************************
+                             *************/
+                       2     ;/*                             Startup File for SP37                                      
+                                                                     */
+                       3     ;/*   -------------------------------------------------------------------------------------
+                             ----------  */
+                       4     ;/*                                                                                        
+                                         */   
+                       5     ;/*   Purpose:   Sets the Stackpointer and defines the used Crystal                        
+                                         */
+                       6     ;/*                                                                                        
+                                                                                                                                 */
+                       7     ;/*                                                                                        
+                                         */
+                       8     ;/*                                                                                        
+                                         */
+                       9     ;/*   Filename:   STARTUP.A51                                                              
+                                             */
+                      10     ;/*                                                                                        
+                                         */
+                      11     ;/*   Target:     SP37                                                                     
+                                         */
+                      12     ;/*                                                                                        
+                                         */
+                      13     ;/*   Dev. Envir: Keil Software C51 V7.10                                                  
+                                         */
+                      14     ;/*               µVision2 V2.40                                                           
+                                         */
+                      15     ;/*   Author:     KBu, SH                                                                  
+                                                             */
+                      16     ;/*                                                                                        
+                                             */
+                      17     ;/*   History:    19.October 2005: First Release                                           
+                                                                                             */
+                      18     ;/*                               10.October 2006: Update for Target Datasheet V1.2        
+                                                         */
+                      19     ;/*                                                                                        
+                                         */
+                      20     ;/*   Status:     Release V1.1                                                             
+                                         */
+                      21     ;/* ***************************************************************************************
+                             *********** */
+                      22     ;/*  (C)opyright Infineon Technologies AG. All rights reserved.                            
+                                         */
+                      23     ;/* ***************************************************************************************
+                             *************/
+                      24     ;/*  This SOFTWARE is Provided "AS IS" Without ANY WARRANTIES OF ANY KIND, WHETHER 
+                      25     ;/*  EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF 
+                      26     ;/*  MERCHANTABILITY,  FITNESS FOR A PARTICULAR PURPOSE or warranties of 
+                      27     ;/*  non-infringement of THIRD PARTY intellectual property rights. infineon 
+                      28     ;/*  disclaims all liability regardless of the cause in law, in particular, but 
+                      29     ;/*  not limited to, the liability for indirect or consequential damages arising 
+                      30     ;/*  from interrupted operation, loss of profits, loss of information and data, 
+                      31     ;/*  unless in cases of gross negligence, intent, lack of assured characteristics 
+                      32     ;/*  or in any cases where liability is mandatory at law.
+                      33     ;/* ***************************************************************************************
+                             *************/ 
+A51 MACRO ASSEMBLER  STARTUP                                                              12/15/2017 21:49:20 PAGE     2
+
+                      34     
+                      35     
+                      36     
+                      37     
+                      38     NAME    SEG_C_STARTUP
+                      39     
+----                  40                     ISEG    AT 0A0h         ; select the stack segment
+00A0                  41     ?STACK:         DS        20h           ; reserve 32bytes of space
+                      42     
+                      43     PUBLIC  ?C_STARTUP
+                      44     
+                      45     ; Example how to insert a crystal clock value of 18.884MHz
+                      46     ; ========================================================
+                      47     
+                      48     ; First, divide the crystal clock value by 2: 
+                      49     
+                      50     ;       18.080MHz 
+                      51     ;       ---------  = 9.040MHz
+                      52     ;           2
+                      53     
+                      54     ; Then transform the result of the division into a hexadecimal value: 
+                      55     
+                      56     ; 9.040MHz = 9040000 Hz => 0x89F080 Hz
+                      57     
+                      58     ; The result of this calculation has to be a 3 byte value in the range of:
+                      59     ; 0x989689 >= crystal clock frequency >= 0x895440
+                      60     ; This result has to be inserted in the User Configuration Sector at address 0x57FA (MSByte
+                             )
+                      61     ; to 0x57FC (LSByte)
+                      62     
+----                  63     CSEG AT 0x57FA 
+                      64     
+                             
+                                             
+                                     
+                                     
+                             
+                      70     
+                      71     
+57FA 89               72             DB      0x89 ; MSByte 
+57FB F0               73             DB  0xF0
+57FC 80               74             DB  0x80 ; LSByte 
+                      75     
+                      76     
+                      77     
+                      78     ; After Reset:
+----                  79     CSEG    AT      04000h
+                      80     EXTRN CODE (MAIN)
+                      81     
+4000                  82     ?C_STARTUP:
+4000 75819F           83           mov       SP, #?STACK - 1         ; load stack pointer
+4003 020000   F       84           ljmp      MAIN                    ; Goto Main
+                      85     
+                      86     
+                      87     END
+A51 MACRO ASSEMBLER  STARTUP                                                              12/15/2017 21:49:20 PAGE     3
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+?C_STARTUP . . . .  C ADDR   4000H   A   
+?STACK . . . . . .  I ADDR   00A0H   A   
+MAIN . . . . . . .  C ADDR   -----       EXT
+SEG_C_STARTUP. . .  N NUMB   -----       
+SP . . . . . . . .  D ADDR   0081H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

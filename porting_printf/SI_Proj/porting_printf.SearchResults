@@ -1,0 +1,7 @@
+---- memcpy Matches (2 in 2 files) ----
+String.c (c:\winshare\learning_for_project\b0201-sp370\porting_printf\lib):void * memcpy(void * dest,const void *src,size_t count)
+String.h (c:\winshare\learning_for_project\b0201-sp370\porting_printf\include):extern void * memcpy(void *,const void *,size_t);
+---- sprintf Matches (3 in 3 files) ----
+Stdio.h (c:\winshare\learning_for_project\b0201-sp370\porting_printf\include):extern int sprintf(char * buf, const char *fmt, ...);
+Vsprintf.c (c:\winshare\learning_for_project\b0201-sp370\porting_printf\lib):int sprintf(char * buf, const char *fmt, ...)
+Vsprintf.h (c:\winshare\learning_for_project\b0201-sp370\porting_printf\lib):int sprintf(char * buf, const char *fmt, ...);
